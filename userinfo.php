@@ -75,4 +75,3 @@ require 'mainconfig.php';
 
   </body>
 </html>
-?>
