@@ -57,7 +57,7 @@ require 'mainconfig.php';
                               Swal.fire({
                                 icon: 'success',
                                 title: 'Success!',
-                                text: obj.user
+                                text: `Name ${obj.user.name}\nEmail ${obj.user.email}`
                               });
                             }else{
                               Swal.fire({
