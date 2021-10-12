@@ -57,7 +57,7 @@ require 'mainconfig.php';
                               Swal.fire({
                                 icon: 'success',
                                 title: 'Success!',
-                                text: result
+                                text: datas
                               });
                             }else{
                               Swal.fire({
