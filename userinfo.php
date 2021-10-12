@@ -54,11 +54,10 @@ require 'mainconfig.php';
                             var obj = JSON.parse(datas);
                             
                             if(obj.status===200){
-                              let str = `Name: ${obj.user.name}\nmail: ${obj.user.email}`;
                               Swal.fire({
                                 icon: 'success',
                                 title: 'Success!',
-                                text: str
+                                text: result
                               });
                             }else{
                               Swal.fire({
