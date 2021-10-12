@@ -1,5 +1,4 @@
 <?php
-<?php
 require 'mainconfig.php';
 ?>
 <!doctype html>
