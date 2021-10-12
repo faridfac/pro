@@ -46,8 +46,7 @@ require 'mainconfig.php';
                     var jwt = $("#jwt").val();
                     $.ajax({
                         url:"<?php echo $config['web']['base_url'] ?>api/user-info",
-                        type:"POST",
-                        data: JSON.stringify(field),
+                        type:"GET",
                         dataType: "json",
                         beforeSend: function(xhr, settings) { xhr.setRequestHeader('Authorization','Bearer ' + jwt ); }
                         success:function(result){
