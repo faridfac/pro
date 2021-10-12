@@ -48,7 +48,7 @@ require 'mainconfig.php';
                         url:"<?php echo $config['web']['base_url'] ?>api/user-info",
                         type:"GET",
                         dataType: "json",
-                        beforeSend: function(xhr, settings) { xhr.setRequestHeader('Authorization','Bearer ' + jwt ); }
+                        beforeSend: function(xhr, settings) { xhr.setRequestHeader('Authorization','Bearer ' + jwt ); },
                         success:function(result){
                             var datas = JSON.stringify(result);
                             var obj = JSON.parse(datas);
