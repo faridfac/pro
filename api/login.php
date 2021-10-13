@@ -14,6 +14,7 @@ function msg($success,$status,$message,$extra = []){
 
 require __DIR__.'/../classes/Database.php';
 require __DIR__.'/../classes/JwtHandler.php';
+require __DIR__.'/model.php';
 
 $db_connection = new Database();
 $conn = $db_connection->dbConnection();
@@ -71,7 +72,7 @@ else:
                         'http://pro.mbahtekno.net/',
                         array("user_id"=> $row['id'],"name"=> $row['name'],"email"=> $row['email'])
                     );
-                    
+                    $model->db_insert($conn, "login_logs", array('user_id' => $row['id'], 'ip_address' => get_client_ip(), 'created_at' => date('Y-m-d H:i:s')));
                     $returnData = [
                         'success' => 'true',
                         'status' => 201,
